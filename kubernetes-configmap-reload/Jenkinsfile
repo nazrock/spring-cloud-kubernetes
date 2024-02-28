@@ -20,10 +20,10 @@ pipeline {
 				expression { params.action == 'create' }
 			}
             steps {
-                gitCheckout(
+                gitCheckout{
                     branch: "main",
                     url: "https://github.com/nazrock/spring-cloud-kubernetes.git"
-                )
+		}
             }
         }
         stage('Build-Maven'){
